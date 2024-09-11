@@ -1,5 +1,8 @@
+#allows for the input of an integer
 number1 = int(input("Enter an integer:"))
+#allows for the input of a second integer
 number2 = int(input("Enter another integer:"))
+#checks to see if the conditions are met then prints a statement about that conditon and tells the user if the statement is true.
 if number1 > 20 and number2 > 20:
     print("Both numbers are greater than 20: ", int(number1) > 20 and int(number2) > 20)
 else:
