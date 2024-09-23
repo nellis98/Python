@@ -9,9 +9,13 @@ KILOGRAMS = 0.453592
 METERS = 0.0254
 #define the function that will solve for bmi and display the results
 def bmi_calculator():
+    #convert pounds to kilograms
     weight = pounds * KILOGRAMS
+    #convert inches to meters
     height = inches * METERS
+    #solve for bmi
     bmi = weight / (height * height)
+    #display results using if elif else to create 4 distinct catagories
     if bmi < 18.5 and bmi > 0:
         print(f"Your BMI is {bmi:,.2f}: Underweight")
     elif bmi >= 18.5 and bmi < 24.9:
@@ -28,5 +32,6 @@ while pounds <= 0 or inches <= 0:
     #display a message that to tell the user to input again if outside of acceptable parameters
     if pounds <= 0 or inches <= 0:
         print("Please reenter your weight and height")
-    #executes the function
-    bmi_calculator()
+    #else executes the function
+    else:
+        bmi_calculator()
